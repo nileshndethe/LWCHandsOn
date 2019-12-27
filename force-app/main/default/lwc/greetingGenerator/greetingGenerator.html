@@ -1,0 +1,32 @@
+<!--
+  @File Name          : greetingGenerator.html
+  @Description        : 
+  @Author             : Nilesh Dethe
+  @Group              : 
+  @Last Modified By   : Nilesh Dethe
+  @Last Modified On   : 8/31/2019, 4:24:30 PM
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    8/31/2019   Nilesh Dethe     Initial Version
+-->
+<template>
+  <lightning-card title="Lightning Day">
+    Selected names are:
+    <template for:each={selectedNames} for:item="name">
+      <p key={name}>
+        Hi {name}
+      </p>
+    </template>
+
+    <lightning-layout multiple-rows="true">
+      <template for:each={names} for:item="name">
+        <lightning-layout-item key={name} size="12" padding="arround-small">
+          <c-hello-world
+            greeting-name={name}
+            onnameselect={nameSelectHandler}
+          ></c-hello-world>
+        </lightning-layout-item>
+      </template>
+    </lightning-layout>
+  </lightning-card>
+</template>

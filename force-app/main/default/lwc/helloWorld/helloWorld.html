@@ -1,0 +1,42 @@
+<!--
+  @File Name          : helloWorld.html
+  @Description        : 
+  @Author             : Nilesh Dethe
+  @Group              : 
+  @Last Modified By   : Nilesh Dethe
+  @Last Modified On   : 12/27/2019, 11:58:40 AM
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    8/31/2019   Nilesh Dethe     Initial Version
+-->
+<template>
+  <lightning-input
+    type="checkbox"
+    onchange={selectedNameHandler}
+    label="name"
+  ></lightning-input
+  >Hello {greetingName}
+
+  <!--Hello {greetingName}!!!
+    <lightning-input
+      label="Greeting"
+      onchange={greetingChangeHandler}
+    ></lightning-input>
+    <lightning-input
+      type="checkbox"
+      label="Show List"
+      onchange={showListHandler}
+    ></lightning-input>
+    <template if:true={showList}>
+      <template for:each={names} for:item="name">
+        <h1 key={name}>Hello {name}</h1>
+      </template>
+    </template>
+    <template iterator:it={names}>
+      <h1 key={name}>Hi {name}</h1>
+    </template>-->
+  <br />
+  <br />
+  <h1>UI Record API Test</h1>
+  <c-ui-record-api-tester></c-ui-record-api-tester>
+</template>
