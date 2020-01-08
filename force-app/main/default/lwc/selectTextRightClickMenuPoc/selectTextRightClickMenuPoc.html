@@ -1,0 +1,43 @@
+<!--
+  @File Name          : selectTextRightClickMenuPoc.html
+  @description        : 
+  @Author             : Nilesh Dethe
+  @Group              : 
+  @Last Modified By   : Nilesh Dethe
+  @Last Modified On   : 1/8/2020, 1:38:37 PM
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    1/3/2020   Nilesh Dethe     Initial Version
+-->
+<template>
+  <!--<div style="width: 20rem;">
+        <lightning-card>
+            <h3 class="title" slot="title">
+                <a href="javascript:void(0);">Day {day.id}</a>
+            </h3>
+            <lightning-button-menu icon-size="xx-small" alternative-text="Actions" slot="actions">
+                <lightning-menu-item value="Copy" label="Copy" onclick={copyDay}></lightning-menu-item>
+            </lightning-button-menu>
+        </lightning-card>
+    </div>
+    <input disabled class="my-class" style="position:fixed;top:-5rem;height:1px;width:10px;"></input>-->
+  <div oncontextmenu={getSelectionText}>
+    This is test text inside lwc text inside html paragraph components for
+    testing select and right click to copy the selected text
+  </div>
+  <br />
+  <lightning-button
+    label="Add Timestamp"
+    onclick={addTimeStamp}
+  ></lightning-button>
+  <br />
+  <lightning-textarea
+    oncontextmenu={getSelectionText}
+    data-id="sampleTxtArea"
+    value="This is test text inside lwc text aread base components for testing select and right click to copy the selected text"
+  ></lightning-textarea>
+
+  <h1>You selected: {selectedText}</h1>
+  <br />
+  <h1>sampleTxtArea Test : {sampleTextAreaTxt}</h1>
+</template>
